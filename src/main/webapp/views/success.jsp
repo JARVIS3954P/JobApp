@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="com.telusko.JobApp.model.JobPost" %>
+<%@ page import="com.jarvis.JobApp.model.JobPost" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@page isELIgnored="false" %>
 <!DOCTYPE html>
@@ -31,7 +31,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-clr">
     <div class="container">
-        <a class="navbar-brand fs-1 fw-medium" href="#">Telusko Job Portal Web App</a>
+        <a class="navbar-brand fs-1 fw-medium" href="#">JARVIS Job Portal Web App</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -51,7 +51,9 @@
         </div>
     </div>
 </nav>
-
+<%
+	JobPost myjobPost = (JobPost) request.getAttribute("jobPost");
+%>
 <div class="container mt-5">
     <h2 class="mb-4 text-center font-weight-bold">Job Post Details</h2>
 
